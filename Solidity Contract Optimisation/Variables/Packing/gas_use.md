@@ -7,11 +7,18 @@
 | PackingVariables          | 143551   |
 | PackingVariablesOptimized | 141602   |
 
-### Function cost
+### Function cost initializing state variable
 
 | Function           | Gas Used |
 | ------------------ | -------- |
 | setSlotb           | 43755    |
+| setSlotb Optimized | 26705    |
+
+### Function cost updating state variable after initializing
+
+| Function           | Gas Used |
+| ------------------ | -------- |
+| setSlotb           | 26655    |
 | setSlotb Optimized | 26705    |
 
 ## Difference in gas
@@ -24,6 +31,7 @@
 
 ### Function cost
 
-| First function | Second Function (Optimized) | Difference |
-| -------------- | --------------------------- | ---------- |
-| setSlotb       | setSlotb Optimized          | 17050      |
+| First function       | Second Function (Optimized)    | Difference |
+| -------------------- | ------------------------------ | ---------- |
+| setSlotb             | setSlotb Optimized             | 17050      |
+| setSlotb second time | setSlotb Optimized second time | -50        |
